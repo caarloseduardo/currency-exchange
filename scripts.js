@@ -1,13 +1,31 @@
-const App = {    
-    init() {   
-        const url = "https://economia.awesomeapi.com.br/all/USD-BRL,EUR-BRL,BTC-BRL";
+const Form = {
+    submit(event) {
+        event.preventDefault();
 
-        const xhttp = new XMLHttpRequest();
-        xhttp.open("GET", url, false);
-        xhttp.send();
-
-        console.log(xhttp.responseText);
+        try {
+            Exchange.getValues();
+        } catch (error) {
+            alert(error.message);
+        }
     }
 }
 
-App.init()
+const Exchange = {
+    getValues() {
+        fetch('https://economia.awesomeapi.com.br/all/BRL-USD,EUR-BRL,USD-EUR')
+        .then(response => { response.json()    
+            .then(data => {
+                const BRL_USD = data.BRL['bid'];
+                const BRL_EUR = data.EUR['bid'];
+                const USD_EUR = data.USD['bid'];
+                Exchange.calculate(BRL_USD, BRL_EUR, USD_EUR);
+            })
+        })
+    },
+
+    calculate(BRL_USD, BRL_EUR, USD_EUR) {
+        const slcCurrency1 = document.querySelector('#slcCurrency1').value;
+        const slcCurrency2 = document.querySelector('#slcCurrency2').value;
+        const exchangeValue = document.querySelector('#exchangeValue').value;
+    }
+}

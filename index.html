@@ -14,10 +14,10 @@
     
     <main class="container">
         <section class="form">
-            <form action="">
+            <form action="" onsubmit="Form.submit(event)">
                 <div class="form-group">
-                    <label for="currency1">Moeda</label>
-                    <select id="currency1">
+                    <label for="slcCurrency1">Moeda</label>
+                    <select id="slcCurrency1" name="slcCurrency1">
                         <option value="dolar">Dólar</option>
                         <option value="euro">Euro</option>
                         <option value="real" selected>Real</option>
@@ -25,13 +25,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="valueCurrency">Qual valor?</label>
-                    <input type="number" id="valueCurrency" name="valueCurrency" />
+                    <label for="exchangeValue">Qual valor?</label>
+                    <input type="number" id="exchangeValue" name="exchangeValue" />
                 </div>
 
                 <div class="form-group">
-                    <label for="currency2">Deseja converter para qual moeda?</label>
-                    <select id="currency2">
+                    <label for="slcCurrency2">Deseja converter para qual moeda?</label>
+                    <select id="slcCurrency2" name="slcCurrency2">
                         <option value="dolar" selected>Dólar</option>
                         <option value="euro">Euro</option>
                         <option value="real">Real</option>
