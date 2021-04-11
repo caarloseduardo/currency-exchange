@@ -27,5 +27,14 @@ const Exchange = {
         const slcCurrency1 = document.querySelector('#slcCurrency1').value;
         const slcCurrency2 = document.querySelector('#slcCurrency2').value;
         const exchangeValue = document.querySelector('#exchangeValue').value;
+        const result = 0;
+
+        if(exchangeValue === '' && slcCurrency1 === slcCurrency2) {
+            alert('Valores inválidos. Tente novamente')
+        } else {
+            if(slcCurrency1 === 'BRL' && slcCurrency1 === 'USD') {
+                result = BRL_USD*exchangeValue;
+            }
+        }
     }
 }
