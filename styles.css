@@ -38,12 +38,17 @@ header .logo-image {
 /* Container */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* Form */
 .form {
     width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-group {
@@ -69,6 +74,10 @@ header .logo-image {
   transition: border-color 0.2s ease-in;
 }
 
+.form-group input {
+    width: 99%;
+}
+
 .form-group input:focus,
 .form-group select:focus {
   border-color:#f1f1f1;
@@ -86,12 +95,19 @@ button {
 }
 
 /* Result */
-.result-content {
-  margin-top: 50px;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
-  background: #1A1A1A;
+.result-container {
+    display: flex;
+    width: 525px;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    background: #1A1A1A;
+}
+
+.result-container .exchange-image {
+    width: 70px;
+    margin-right: 160px;
 }
 
 /* Responsive */
@@ -99,6 +115,7 @@ button {
     .form {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .form-group {
@@ -107,5 +124,14 @@ button {
 
     button {
         width: 350px;
+    }
+
+    .result-container {
+        width: 330px;
+    }
+
+    .result-container .exchange-image {
+        width: 60px;
+        margin-right: 85px;
     }
 }
