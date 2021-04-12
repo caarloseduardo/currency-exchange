@@ -31,23 +31,21 @@ const Exchange = {
         let result = 0;
 
         if(exchangeValue === '' || slcCurrency1 === slcCurrency2) {
-            alert('Valores inválidos. Tente novamente')
-        } else {
-            if(slcCurrency1 === 'BRL' && slcCurrency2 === 'USD') {
-                result = '$' + (exchangeValue * BRL_USD).toFixed(2);
-            } else if(slcCurrency1 === 'USD' && slcCurrency2 === 'BRL') {
-                result = 'R$' + (exchangeValue / BRL_USD).toFixed(2);
-            } else if(slcCurrency1 === 'BRL' && slcCurrency2 === 'EUR') {
-                result = '€' + (exchangeValue / EUR_BRL).toFixed(2);
-            } else if(slcCurrency1 === 'EUR' && slcCurrency2 === 'BRL') {
-                result = 'R$' + (exchangeValue * EUR_BRL).toFixed(2);
-            } else if(slcCurrency1 === 'EUR' && slcCurrency2 === 'USD') {
-                result = '$' + (exchangeValue / USD_EUR).toFixed(2);
-            } else if(slcCurrency1 === 'USD' && slcCurrency2 === 'EUR') {
-                result = '€' + (exchangeValue * USD_EUR).toFixed(2);
-            }
-            DOM.innerHTMLResult(result);
+            alert('Valores inválidos. Tente novamente');
+        } else if(slcCurrency1 === 'BRL' && slcCurrency2 === 'USD') {
+            result = '$' + (exchangeValue * BRL_USD).toFixed(2);
+        } else if(slcCurrency1 === 'USD' && slcCurrency2 === 'BRL') {
+            result = 'R$' + (exchangeValue / BRL_USD).toFixed(2);
+        } else if(slcCurrency1 === 'BRL' && slcCurrency2 === 'EUR') {
+            result = '€' + (exchangeValue / EUR_BRL).toFixed(2);
+        } else if(slcCurrency1 === 'EUR' && slcCurrency2 === 'BRL') {
+            result = 'R$' + (exchangeValue * EUR_BRL).toFixed(2);
+        } else if(slcCurrency1 === 'EUR' && slcCurrency2 === 'USD') {
+            result = '$' + (exchangeValue / USD_EUR).toFixed(2);
+        } else if(slcCurrency1 === 'USD' && slcCurrency2 === 'EUR') {
+            result = '€' + (exchangeValue * USD_EUR).toFixed(2);
         }
+        DOM.innerHTMLResult(result);
     }
 }
 

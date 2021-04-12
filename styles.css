@@ -107,7 +107,7 @@ button {
 
 .result-container .exchange-image {
     width: 70px;
-    margin-right: 160px;
+    margin-right: 50px;
 }
 
 /* Responsive */
@@ -132,6 +132,6 @@ button {
 
     .result-container .exchange-image {
         width: 60px;
-        margin-right: 85px;
+        margin-right: 15px;
     }
 }
